@@ -3,8 +3,6 @@ html {
   height: 100vh;
   position: relative;
 }
-.container {
-}
 
 html::after {
   background: url(./images/ToFBG.jpg);
