@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #344a72;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  /* 
+    -Remember, margin: auto on left and right will center a block element 
+    -I would also set a "max-width" for responsiveness
+    -May want to add some padding
+    */
+  margin: 30px auto;
+
+  max-width: 400px;
+  position: relative;
+  align-items: center;
+}
+
+.form-wrap {
+  /* 
+      This is the white area around the form and heading, etc
+    */
+  background-color: white;
+  top: 40px;
+  position: relative;
+  display: block;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-wrap h1,
+.form-wrap p {
+  /* 
+      May want to center these
+    */
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 4px;
+  margin: 10px;
+}
+
+.form-wrap .form-group {
+  /* 
+      Each label, input is wrapped in .form-group
+    */
+  color: rgb(148, 147, 147);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.form-wrap .form-group label {
+  /* 
+      Label should be turned into a block element
+    */
+  display: block;
+}
+
+.form-wrap .form-group input {
+  /* 
+      Inputs should reach accross the .form-wrap 100% and have some padding
+    */
+  width: 100%;
+  padding: 8px;
+  margin: 12px 0;
+  border: 1px solid rgba(148, 148, 148, 0.2);
+  border-radius: 5px;
+}
+.form-group input:focus {
+  /* 
+      Inputs should reach accross the .form-wrap 100% and have some padding
+    */
+
+  outline: rgb(148, 148, 148);
+}
+
+.form-wrap button {
+  /* 
+      Button should wrap accross 100% and display as block
+      Background color for button is #49c1a2
+    
+    */
+  width: 100%;
+  background-color: #49c1a2;
+  padding: 10px;
+  border: none;
+  margin: 7px 0;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.form-wrap button:hover {
+  background-color: #37a08e;
+}
+
+.form-wrap .bottom-text {
+  /* 
+      Bottom text is smaller
+    */
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  top: 50px;
+  margin: 10px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer a {
+  color: #49c1a2;
+}
