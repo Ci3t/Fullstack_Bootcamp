@@ -1,0 +1,191 @@
+html {
+  width: 100%;
+  height: 120vh;
+  position: relative;
+}
+
+html::after {
+  background: url(./images/ToFBG.jpg);
+  content: "";
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+}
+.nav-bar {
+  background-color: rgb(2, 74, 92);
+  background-image: url(./images/pattern.jpg);
+
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid rgb(24, 84, 139);
+  z-index: 100;
+}
+
+.spacer {
+  width: 100%;
+  height: 95px;
+}
+
+.btns {
+  position: relative;
+  margin: 10px;
+  right: 5%;
+  border: none;
+  background-color: rgb(40, 121, 158);
+  transition: 0.15s;
+  color: white;
+  border-radius: 5px;
+  width: 10%;
+  max-width: 130px;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+.btns:hover {
+  background-color: rgba(175, 104, 37, 0.979);
+
+  box-shadow: -2px 3px 8px -4px #0c2c57;
+}
+
+h1 {
+  color: rgb(37, 37, 36);
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  font-family: "Lobster", cursive, trebuchet MS;
+}
+h2 {
+  color: rgb(48, 1, 12);
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  font-family: "Lobster", cursive, trebuchet MS;
+}
+h1 em {
+  color: rgb(119, 65, 4);
+}
+.about_me {
+  text-align: center;
+  justify-content: center;
+  color: rgb(97, 59, 9);
+  font-weight: bold;
+}
+.info {
+  color: rgb(32, 24, 20);
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
+fieldset {
+  border-radius: 5px;
+  border: 1px solid rgb(179, 132, 5);
+}
+
+.img-samir {
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
+.follow_me {
+  color: rgb(48, 1, 12);
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 20%;
+}
+.links {
+  text-align: center;
+  clear: left;
+}
+
+.links a {
+  margin: 2px;
+  display: inline-block;
+}
+.card {
+  background-color: red;
+  width: calc(20%);
+  justify-content: center;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  margin: 10px 20px;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+  height: 250px;
+  margin-bottom: -5px;
+}
+
+.card-text {
+  background-color: rgb(41, 40, 56);
+  color: wheat;
+}
+/* .cards {
+  display: block;
+} */
+.card-text,
+h4,
+p,
+a {
+  margin: auto;
+  padding: 8px 4px 10px;
+  text-align: center;
+}
+
+a {
+  color: rgb(97, 173, 235);
+}
+.card-text h4 {
+  font-weight: bold;
+}
+
+#card1 {
+  float: right;
+  width: calc(20% -10px);
+}
+#card2 {
+  float: right;
+  width: calc(20% -10px);
+}
+#card3 {
+  float: left;
+  width: calc(20% -10px);
+}
+#card4 {
+  float: left;
+  width: calc(20% -10px);
+}
+@media all and (max-width: 768px) {
+  .nav-bar {
+    justify-content: center;
+  }
+  .card {
+    display: block;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+}

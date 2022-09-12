@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.block {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  width: 25%;
+}
+
+.text1 {
+  background-color: red;
+}
+.text2 {
+  background-color: rgb(26, 34, 156);
+}
+
+@media all and (max-width: 700px) {
+  .block {
+    font-size: 8px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .block {
+    font-size: 35px;
+  }
+}
+@media all and (min-width: 701px) and (max-width: 1199px) {
+  .block {
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 700px), (min-width: 1000px) {
+  .text1 {
+    background-color: lightsalmon;
+  }
+  .text2 {
+    background-color: lightpink;
+  }
+  .text3 {
+    background-color: lightgreen;
+  }
+}
