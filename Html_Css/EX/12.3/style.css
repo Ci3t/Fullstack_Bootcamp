@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.box1 {
+  background-color: brown;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 10px;
+}
+.box1::before,
+.box1::after {
+  content: "";
+  position: absolute;
+  background-color: bisque;
+  height: 100%;
+  width: 50%;
+}
+/* .box1 > div {
+  position: absolute;
+  background-color: bisque;
+  height: 100%;
+  width: 50%;
+} */
+.box1:hover::before,
+.box1:hover::after {
+  content: "";
+  background-color: rgb(175, 84, 228);
+}

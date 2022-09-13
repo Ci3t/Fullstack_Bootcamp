@@ -1,0 +1,6 @@
+.web a[href]::after {
+  content: " (https://www.appleseeds.org.il)";
+}
+.web a {
+  text-decoration: none;
+}

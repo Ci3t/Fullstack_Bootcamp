@@ -1,0 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.box1 {
+  background-color: brown;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 10px;
+}
+
+.box1::before {
+  content: "";
+  position: absolute;
+  background-color: bisque;
+  height: 100%;
+  width: 50%;
+}
