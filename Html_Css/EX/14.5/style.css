@@ -68,7 +68,30 @@ section {
     transform: rotate(360deg);
   }
 }
+/* testing */
+.spin2:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50%;
+  border: 2px dotted transparent;
+  border-top-color: rgb(230, 174, 72);
+  animation: spin 1s linear infinite reverse;
+}
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*  */
 .dot {
   position: relative;
   left: -9999px;
@@ -142,6 +165,46 @@ section {
   100% {
     box-shadow: 10014px 0 0 -5px #e2a127;
   }
+}
+/* Dot-1 */
+
+.dot-1 {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+
+  border-radius: 20%;
+  margin-left: 0.2rem;
+  animation: anidot 2s infinite;
+}
+.dot-1::before {
+  animation-delay: 0s;
+}
+.dot-1::after {
+  animation-delay: 1s;
+}
+@-webkit-keyframes anidot {
+  0%,
+  100% {
+    transform: scale(0);
+    background-color: bisque;
+  }
+  40% {
+    background-color: rgb(231, 150, 83);
+  }
+  50% {
+    transform: scale(0.8);
+    background-color: #e2a127;
+  }
+}
+#se:nth-child(1) {
+  -webkit-animation-delay: 0s;
+}
+#se:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+}
+#se:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
 }
 
 /* DOt 2 */
