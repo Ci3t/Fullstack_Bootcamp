@@ -1,0 +1,198 @@
+body {
+  background-color: black;
+}
+
+section {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.load {
+  margin: 20px;
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+/* First div */
+.spin {
+  border-radius: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.spin:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50px;
+  border: 3px solid transparent;
+  border-top-color: rgb(230, 174, 72);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* .spin1 {
+  border-radius: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+} */
+
+.spin1:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50px;
+  border: 3px solid transparent;
+  border-top-color: rgb(230, 174, 72);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dot {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #e2a127;
+  color: #e2a127;
+  box-shadow: 9999px 0 0 -5px #e2a127;
+  animation: dot 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+
+.dot:before,
+.dot:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #e2a127;
+  color: #e2a127;
+}
+.dot::before {
+  box-shadow: 9984px 0 0 -5px #e2a127;
+  animation: doteBefore 1.5s infinite linear;
+  animation-delay: 0s;
+}
+
+.dot::after {
+  box-shadow: 10014px 0 0 -5px #e2a127;
+  animation: dotAfter 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes dotBefore {
+  0% {
+    box-shadow: 9984px 0 0 -5px #e2a127;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px #e2a127;
+  }
+  60%,
+  100% {
+    box-shadow: 9984px 0 0 -5px #e2a127;
+  }
+}
+@keyframes dot {
+  0% {
+    box-shadow: 9999px 0 0 -5px #e2a127;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px #e2a127;
+  }
+  60%,
+  100% {
+    box-shadow: 9999px 0 0 -5px #e2a127;
+  }
+}
+
+@keyframes dotAfter {
+  0% {
+    box-shadow: 10014px 0 0 -5px #e2a127;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px #e2a127;
+  }
+  60%,
+  100% {
+    box-shadow: 10014px 0 0 -5px #e2a127;
+  }
+}
+
+/* DOt 2 */
+
+.dot2 {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #e2a127;
+  color: #e2a127;
+  animation: dotload 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+
+.dot2::before,
+.dot2::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot2::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #e2a127;
+  color: #e2a127;
+  animation: dotload 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot2::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #e2a127;
+  color: #e2a127;
+  animation: dotload 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotload {
+  0% {
+    background-color: #e2a127;
+  }
+  50%,
+  100% {
+    background-color: #fff5e6;
+  }
+}
