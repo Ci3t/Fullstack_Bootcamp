@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(228, 241, 252);
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr 1fr auto;
+  grid-template-areas:
+    "header header header header"
+    "sidebar sidebar content content"
+    "sidebar sidebar sidebar2 footer";
+  background-color: lightgrey;
+  padding: 10px;
+  gap: 10px;
+  width: 500px;
+}
+
+.header {
+  background-color: rgba(221, 35, 159, 0.8);
+  padding: 20px;
+  grid-area: header;
+  border-radius: 8px;
+}
+.sidebar2 {
+  background-color: rgba(179, 19, 19, 0.8);
+  padding: 20px;
+  grid-area: sidebar2;
+  border-radius: 8px;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgba(21, 90, 81, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+}
+.content {
+  grid-area: content;
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 8px;
+}
+.footer {
+  background-color: rgba(56, 25, 196, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  grid-area: footer;
+}
+
+@media all and (max-width: 550px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "header "
+      "sidebar"
+      "content"
+      "sidebar2"
+      "footer";
+    background-color: lightgrey;
+    padding: 10px;
+    gap: 10px;
+    width: 500px;
+  }
+}
+@media all and (min-width: 551px) and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "header header header"
+      "sidebar content content"
+      "sidebar2 sidebar2 sidebar2"
+      "footer footer footer";
+    background-color: lightgrey;
+    padding: 10px;
+    gap: 10px;
+    width: 500px;
+  }
+}
+@media all and (min-width: 769px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "header header header"
+      "sidebar content sidebar2"
+      "footer footer footer";
+    background-color: lightgrey;
+    padding: 10px;
+    gap: 10px;
+    width: 500px;
+    
+  }
+}
