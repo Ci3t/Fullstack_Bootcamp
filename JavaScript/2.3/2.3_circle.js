@@ -6,4 +6,4 @@ let circle = (myRadius) => {
 
 
 console.log(circle(25));
-console.log(Math.round(circle(25)));
+console.log(circle(25).toFixed(2));
