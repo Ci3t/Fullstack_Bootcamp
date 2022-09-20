@@ -8,4 +8,4 @@ const leapYear = (year) => {
     }
 }
 
-leapYear(2012);
+leapYear(2018);
