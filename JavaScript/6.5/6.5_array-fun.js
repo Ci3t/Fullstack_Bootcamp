@@ -4,7 +4,7 @@
 arr = Array(100).fill({ pizza: 'HOT' })
 console.log(arr)
 
-arr2 = Array.from({length: 101}, (v,i) => i);
+arr2 = Array.from({length: 100}, (v,i) => i);
     console.log(arr2)
 
 const obj = {"1":5,"2":7,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0}
