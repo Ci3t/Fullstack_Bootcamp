@@ -1,12 +1,12 @@
 
+const func1 = (x) =>{
+    console.log(x)
+}
 
-
-const isString = (a, callback) => {
-    function callback (x) {
-        console.log(x);
-    }
+const isString = (a, func1) => {
+    func1(x);
     if (typeof a === 'string') {
-        callback(a)
+        func1(a)
     }
 }
 isString('hello world')
