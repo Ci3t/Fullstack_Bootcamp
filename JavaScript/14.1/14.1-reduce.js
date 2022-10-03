@@ -14,8 +14,8 @@ const max = () => {
 const average = () => {
     
     a = numbers.reduce((total,current) => {
-        return total + current;
-    })
+        return total + current / numbers.length;
+    },0)
     return a
 
 }

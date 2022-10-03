@@ -45,33 +45,18 @@ const school = {
     }
     
 
-    const assignStudent = (studentID, subject) => {
-        const studentByID = findPerson("students", studentID);
-        const teacherByCapAndSub = school.teachers.filter(
-            (t) => t.capacityLeft !== 0 && t.subjects.includes(subject)
-        );
-        let chosenTeacher = teacherByCapAndSub[0];
-        // console.log(teacherByCapAndSub);
-        // console.log(chosenTeacher);
-        if (teacherByCapAndSub.length === 0) {
-            return `Sorry, no available teachers left.`;
-        } else {
-            let chosenTeacher = teacherByCapAndSub[0];
-            chosenTeacher.students.push(studentByID);
-            chosenTeacher.capacityLeft--;
+
+    const assignTeachersSubject = (id, subject) => {
+        const teacher = school.teachers.find((teacher) => teacher.id === id);
+        if (teacher){
+            if(teacher.subjects.includes(subject)){
+              a =  teacher.subjects.push(subject)
+              return a
+            }
+
+            return teacher
         }
-        console.log(school);
-    };
-  
-
-    // const assignTeachersSubject = (teacherID, newSubject) => {
-    //     const teacherByID = findPerson("teachers", teacherID);
-    //     if (teacherByID.subjects.includes(newSubject) === false) {
-    //         teacherByID.subjects.push(newSubject);
-    //     }
-    //     console.log(school);
-    // };
-
+    }
 
     const addStudent = (school, id, name, age) => {
         const student = {
@@ -84,9 +69,9 @@ const school = {
     };
     // console.log(findPerson("students",13));
     // console.log(findPerson("teachers",1));
-    console.log(assignStudent(12,'history'))
-    // console.log(assignTeachersSubject(7,'sports'))
-    console.log(addStudent(school,17,'Layla',26))
+    // console.log(assignStudent(12,'history'))
+    console.log(assignTeachersSubject(7,'sports')) 
+    // console.log(addStudent(school,17,'Layla',26))
     // console.log(assignStudent(13,'history'))
     // console.log(assignStudent(10,'history'))
 
