@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+    <a href="#">link</a>
+    <img src="" alt="" />
+    <div class="x">Div with a class</div>
+    <div id="y">Div with an id</div>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+  </body>
+  <script>
+    //? Select elements By Id,class,tag
+    const h1 = document.getElementsByTagName("h1");
+    const p = document.getElementsByTagName("p");
+    const a = document.getElementsByTagName("a");
+    const img = document.getElementsByTagName("img");
+    const x = document.getElementsByClassName("x");
+    const y = document.getElementById("y");
+    const input = document.getElementsByTagName("input");
+
+    // console.log(h1);
+    // console.log(p);
+    // console.log(a);
+    // console.log(img);
+    // console.log(x);
+    // console.log(y);
+    // console.log(input);
+
+    //? query selector
+
+    const h12 = document.querySelector("h1");
+    const p2 = document.querySelector("p");
+    const a2 = document.querySelector("a");
+    const img2 = document.querySelector("img");
+    const x2 = document.querySelector(".x");
+    const y2 = document.querySelector("#y");
+    const input2 = document.querySelectorAll("input");
+
+    // console.log(h12);
+    // console.log(p2);
+    // console.log(a2);
+    // console.log(img2);
+    // console.log(x2);
+    // console.log(y2);
+    // console.log(input2);
+
+    //? forEach
+
+    const inputs = document.querySelectorAll("input");
+    inputs.forEach((i) => {
+      console.log(i);
+    });
+    const inputs2 = document.getElementsByTagName("input");
+    inputs.forEach((i) => {
+      console.log(i);
+    });
+  </script>
+</html>

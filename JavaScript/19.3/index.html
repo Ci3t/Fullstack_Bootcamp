@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 10em;
+        margin-left: 0.3em;
+      }
+
+      div {
+        background-color: rgb(235, 233, 137);
+        padding: 5em;
+        text-align: center;
+      }
+
+      input {
+        padding: 10px 10px;
+        /* width: 20px; */
+      }
+    </style>
+  </head>
+  <body>
+    <form name="verify">
+      <div class="inputs">
+        <h1>Copy</h1>
+        <h4 class="num">123456</h4>
+        <input type="text" name="n1" maxlength="1" />
+        <input type="text" name="n2" maxlength="1" />
+        <input type="text" name="n3" maxlength="1" />
+        <input type="text" name="n4" maxlength="1" />
+        <input type="text" name="n5" maxlength="1" />
+        <input type="text" name="n6" maxlength="1" />
+      </div>
+      <input type="submit" value="Verify" />
+    </form>
+
+    <script>
+      const h4 = document.querySelector(".num");
+      const h1 = document.querySelector("h1");
+      // const form = document.querySelector('[name="verfiy"]');
+
+      // const inputs = document.querySelector(".inputs input");
+
+      h4.addEventListener("click", () => {
+        document.execCommand("Copy");
+      });
+      // h1.addEventListener("click", (e) => {
+      //   document.execCommand("Copy");
+      // });
+      // input.addEventListener("click", (e) => {
+      //   // pasteText.focus();
+      //   document.execCommand("paste");
+      // });
+
+      const form = document.querySelector('[name="verify"]');
+      const inputs = document.querySelectorAll(".inputs input");
+
+      function handleInput(e) {
+        // check for data that was inputtted and if there is a next input, focus it
+        const input = e.target;
+        if (input.nextElementSibling && input.value) {
+          input.nextElementSibling.focus();
+        }
+      }
+
+      function handlePaste(e) {
+        const paste = e.clipboardData.getData("text");
+        // loop over each input, and populate with the index of that string
+        inputs.forEach((input, i) => {
+          console.log(input);
+          input.value = paste[i] || "";
+        });
+      }
+
+      inputs[0].addEventListener("paste", handlePaste);
+
+      form.addEventListener("input", handleInput);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const users = [
+        {
+          id: 167464,
+          firstName: "Jimmy",
+          lastName: "Arnold",
+          email: "jimmya@gmail.com",
+        },
+        {
+          id: 578447,
+          firstName: "Martha",
+          lastName: "Goldman",
+          email: "gold@hotmail.com",
+        },
+        {
+          id: 864578,
+          firstName: "Tim",
+          lastName: "Burton",
+          email: "timmy.hotmail.com",
+        },
+      ];
+
+      const ol = document.createElement("ol");
+      document.body.appendChild(ol);
+      //   const li = document.createElement("li");
+      //   li.innerHTML = "hi";
+
+      //   console.log(li);
+      //   ol.appendChild(li);
+      const list2 = document.querySelector("ol");
+      //   users.forEach((e) => {
+      //     let first = e.firstName;
+      //     console.log(e.firstName);
+      //     list.innerText(e.firstName);
+      //   });
+      //   console.log(ol);
+
+      const list = (arr, e) => {
+        arr.forEach((element) => {
+          const li = document.createElement("li");
+          li.textContent = element.firstName + " " + element.lastName;
+          li.setAttribute("data-id", element.id);
+          e.appendChild(li);
+        });
+      };
+      list(users, list2);
+
+      list2.style.listStyleType = "none";
+      const li2 = document.querySelectorAll("li");
+    </script>
+  </body>
+</html>

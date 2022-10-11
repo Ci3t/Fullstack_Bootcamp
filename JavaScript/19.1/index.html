@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <ul>
+      <li>title 1</li>
+      <li class="start-here">title 2</li>
+      <li>
+        <ul>
+          <li>sub title 1</li>
+          <li>sub title 2</li>
+          <li>sub title 3</li>
+        </ul>
+      </li>
+      <!-- <li>aaa</li> -->
+      <li>title 3</li>
+    </ul>
+    <div>
+      <p>Hello World!</p>
+    </div>
+
+    <script>
+      //select start here
+      const start = document.querySelector("ul .start-here");
+      //   console.log(start);
+      //select the UL of index 1
+
+      const sub = document.querySelectorAll("ul")[1];
+      //make new LI and text
+      let newLi = document.createElement("li");
+      newLi.innerHTML = "subtitle 4";
+      //append the new li to the parent ul
+      sub.appendChild(newLi);
+      //   console.log(sub);
+
+      // const parentlast = document.querySelectorAll("ul")[0];
+      // const last = parentlast.querySelectorAll("li")[7];
+      // //   last.remove();
+      // parentlast.removeChild(last);
+      start.parentElement.lastElementChild.remove();
+      console.log(last);
+      start.innerHTML = "main title";
+
+      //   console.log("ul.children");
+
+      document.title = "Master Of The Dom";
+
+      const p = document.querySelector("p");
+      p.innerHTML = "Bruh";
+    </script>
+  </body>
+</html>
