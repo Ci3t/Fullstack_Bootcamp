@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 5em;
+        }
+        img{
+            margin-top: 2em;
+            max-width: 40px;
+            /* opacity: 0; */
+        }
+       
+    </style>
+</head>
+<body>
+    <div>
+
+        <p>how many smileys do you want to see?</p>
+   
+       <input type="number" name="smiles" id="smiles">
+       <button>Submit</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        const button = document.querySelector('button')
+        const input = document.querySelector('input')
+        // const img =  document.querySelector('img')
+        const smile =  document.createElement('span')
+        const out =  document.querySelector('output')
+        // smile.setAttribute('class','img')
+        smile.innerHTML = "&#x1F600;";
+
+        
+        button.addEventListener('click',() =>{
+            
+            if(+input.value < 0){
+                out.innerHTML = "invalid"
+                return;
+            }
+            
+            const times = +input.value;
+            out.innerHTML = "";
+
+           for(let i =0 ; i< times; i++){
+           out.append(smile.cloneNode(true));
+           }
+        //    console.log(out);
+           
+        console.log(out);
+        })
+
+
+
+    </script>
+</body>
+</html>

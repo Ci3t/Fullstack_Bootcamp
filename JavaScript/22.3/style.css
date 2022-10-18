@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    margin-top: 10em;
+    background-color: lightcoral;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button{
+    opacity: 0;
+}
+
+.btnShow{
+    opacity: 1;
+}
+
+.guessed{
+    border: 1px solid black;
+    width: 14px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-left: 6em;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lightbulb</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            position: relative;
+        }
+        .container{
+            width: 230px;
+            height: 340px;
+            /* background-size: 400px; */
+            background-image: url(istockphoto-629530404-170667a.jpg);
+            /* opacity: 1; */
+            cursor: pointer;
+        }
+        .mv{
+            background-position: -232px;
+            position: absolute;
+            /* visibility:hidden; */
+            width: 230px;
+            height: 340px;
+            /* background-size: 400px; */
+            background-image: url(istockphoto-629530404-170667a.jpg);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">  
+    </div>
+    <!-- <div class="mv">  
+    </div> -->
+
+    <script>
+        const off = document.querySelector('div')
+      
+        off.addEventListener('click',(e)=>{   
+            if(!e.target.classList.contains('mv')){
+                off.classList.add('mv')      
+            }else{     
+                off.classList.remove('mv')
+            }
+        })
+       
+
+    </script>
+</body>
+</html>

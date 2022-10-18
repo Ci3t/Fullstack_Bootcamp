@@ -1,0 +1,66 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+.container{
+
+    align-items: center;
+    margin-top: 10em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    width: 20em;
+    height: 20em;
+    position: relative;
+    
+
+}
+
+.container h1{
+   padding: 0.5em;
+}
+
+#form{
+    line-height: 1.8;
+}
+
+.msg{
+    border: 1px solid black;
+    width: 30em;
+    height: 10em;
+    text-align: center;
+    padding: 2em;
+    position: absolute;
+    top:5em;
+    right: -5em;
+    background-color: lightgoldenrodyellow;
+    display: none;
+    
+}
+.msg p{
+    line-height: 1.8;
+}
+.msg button{
+    line-height: 1.8;
+    min-height: 1.8;
+    padding: 0 10px;
+    
+}
+.msg .submit{
+    background-color: lightgreen;
+    border: 1px solid rgb(66, 65, 65);
+    border-radius: 5px;
+}
+.msg .change{
+    background-color: lightcoral;
+    border: 1px solid rgb(66, 65, 65);
+    border-radius: 5px;
+}
+.show{
+    display: block;
+}
