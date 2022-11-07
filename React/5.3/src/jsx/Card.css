@@ -1,0 +1,35 @@
+body{
+    background-color: #282c34;
+}
+.container{
+    border: 1px solid white;
+    background-color: white;
+    width: 300px;
+    margin: 2em 4em;
+    padding: 0 0 1em 0;
+}
+img{
+
+    max-width: 300px;
+}
+
+h1{
+    font-size: 30px;
+    color:black
+}
+
+p{
+    font-size: 20px;
+    color:black
+}
+a{
+    /* margin-left: 1em; */
+    margin-right: 1em;
+    
+    text-decoration: none;
+    color:crimson;
+    font-size: 20px;
+   
+    /* display: flex; */
+   text-align: left;
+}

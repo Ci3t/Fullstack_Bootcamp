@@ -1,0 +1,17 @@
+
+.container{
+    border: 1px solid white;
+    width: 15em;
+}
+.box{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 10em;
+    background-color: yellow;
+    height: 10em;
+}
+.hide{
+    display: none;
+}
