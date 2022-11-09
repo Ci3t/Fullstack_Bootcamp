@@ -93,10 +93,8 @@ function Data({name}) {
             
             return(
                 <div>
-                    <Card name2={name}   />
-                    <Card birth={birthday} />
-                    <Card food ={favoriteFoods.meats}/>
-                    <Card  food2 ={favoriteFoods.fish}/>
+                    <Card name2={name}  birth={birthday} food ={favoriteFoods.meats}  food2 ={favoriteFoods.fish}/>
+                 
                 </div>
             )
 
