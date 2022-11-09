@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+}
+
+.nezuko-img{
+    filter: grayscale();
+}
+.sonic-img{
+    filter: grayscale();
+}
