@@ -1,5 +1,7 @@
 import express from 'express'
 import { indexRouter } from './routers/index.router.js'
+import * as dotenv from 'dotenv'
+dotenv.config()
 import cors from 'cors'
 const app = express();
 const PORT = 5000;

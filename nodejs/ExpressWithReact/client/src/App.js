@@ -22,7 +22,7 @@ function App() {
   
     }
     getWeather()
-  },[])
+  },[city])
 
   console.log(city);
   return (

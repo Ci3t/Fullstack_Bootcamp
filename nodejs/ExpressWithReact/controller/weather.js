@@ -15,10 +15,8 @@ let weatherParse = JSON.parse(
 
 export const getWeather = async(req,res)=>{
 
-    console.log(req.query);
-    console.log(req.query.q);
-    console.log(req.params);
-    const city = req.params.q
+    
+    const city = req.query.q
     try{
 
       const weath =  await axios.get('https://weatherapi-com.p.rapidapi.com/forecast.json',{
@@ -26,7 +24,7 @@ export const getWeather = async(req,res)=>{
             'X-RapidAPI-Key': process.env.REACT_APP_KEY,
             'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
           },
-            params: {q: 'London'}
+            params: {q: city}
         })
         res.send(weath.data)
     }catch(err){
