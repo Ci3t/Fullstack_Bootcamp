@@ -23,7 +23,7 @@ export const getWeather = async(req,res)=>{
 
       const weath =  await axios.get('https://weatherapi-com.p.rapidapi.com/forecast.json',{
         headers: {
-            'X-RapidAPI-Key': 'd121f27469msh45f35ef23203971p1324a3jsnd99ee818408f',
+            'X-RapidAPI-Key': process.env.REACT_APP_KEY,
             'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
           },
             params: {q: 'London'}
