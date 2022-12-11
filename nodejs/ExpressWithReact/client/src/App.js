@@ -26,9 +26,9 @@ function App() {
 
   console.log(city);
   return (
-    <div>
-      <label> Enter City
-        <input value={input} onChange={(e)=>{setInput(e.target.value)}} type={'text'}/>
+    <div className="App">
+      <label> Enter City 
+         : <input value={input} onChange={(e)=>{setInput(e.target.value)}} type={'text'}/>
         <button onClick={()=>{setCity(input)}} >Submit</button>
       </label>
       { weather.location &&
