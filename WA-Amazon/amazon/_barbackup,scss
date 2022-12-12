@@ -1,0 +1,83 @@
+/* display: flex;
+.search-bar {
+  background: #fff;
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  padding: 2px;
+  border: 4px;
+
+  #select-menu {
+    background-color: #160053;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    //   width: 300px;
+    padding: 0 20px;
+    cursor: pointer;
+    position: relative;
+
+    ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      background-color: #fff;
+      color: #555;
+      width: 100%;
+      border-radius: 4px;
+      max-height: 0;
+      overflow: hidden;
+      width: 300px;
+
+      li {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    }
+    ul.open {
+      max-height: 800px;
+    }
+  }
+  input {
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+} */
+
+/* !!! */
+
+/* <option selected="selected" class="options">
+All Departments
+</option>
+<option class="options">Arts & Crafts</option>
+<option class="options">Automotive</option>
+<option class="options">Baby</option>
+<option class="options">Beauty & Personal Care</option>
+<option class="options">Books</option>
+<option class="options">Boys' Fashion</option>
+<option class="options">Computers</option>
+<option class="options">Deals</option>
+<option class="options">Digital Music</option>
+<option class="options">Electronics</option>
+<option class="options">Girls' Fashion</option>
+<option class="options">Health & Household</option>
+<option class="options">Home & Kitchen</option>
+<option class="options">Industrial & Scientific</option>
+<option class="options">Kindle Store</option>
+<option class="options">Luggage</option>
+<option class="options">Men's Fashion</option>
+<option class="options">Movies & TV</option>
+<option class="options">Music, CDs & Vinyl</option>
+<option class="options">Pet Suppoptiones</option>
+<option class="options">Prime Video</option>
+<option class="options">Software</option>
+<option class="options">Sports & Outdoors</option>
+<option class="options">Tools & Home Improvement</option>
+<option class="options">Toys & Games</option>
+<option class="options">Video Games</option>
+<option class="options">Women's Fashion</option> */

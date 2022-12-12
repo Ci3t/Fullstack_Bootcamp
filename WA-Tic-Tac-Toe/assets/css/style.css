@@ -56,3 +56,7 @@ body {
   margin-bottom: 50px;
   color: white;
 }
+
+.score .players{
+  display: flex;
+}

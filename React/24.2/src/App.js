@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 
 function App() {
-  const { data, loading, error } = useFetch('https://api.quotable.io/random');
+  const { data, loading, error } = useFetch('https://api.chucknorris.io/jokes/random');
 
   if (loading) return <h1>Loading ...</h1>
   if (error) console.log(error);
@@ -15,7 +15,7 @@ function App() {
 console.log(loading);
   return (
     <div className="App">
-      <p>{data && data}</p>
+      <p>{data && data.value}</p>
     </div>
   );
 }

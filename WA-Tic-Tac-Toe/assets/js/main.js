@@ -11,25 +11,26 @@ let won = false;
 let tie = false;
 const player1 = "X";
 const player2 = "O";
-let light = getComputedStyle(document.body).getPropertyValue('--highlightWinner')
+
 
 let playerTurn = player1;
 
 
 
 let options = new Array(9).fill(null);
+let checkedPosition = []
 
 
 let winning = [
-    [0,1,2],
-    [3,4,5],
-    [6,7,8],
-    [0,3,6],
-    [1,4,7],
-    [2,5,8],
-    [0,4,8],
-    [2,4,6]
-    
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+
 ]
 
 boardDraw();
@@ -53,9 +54,9 @@ function boardDraw() {
     }
 
     box.style = border;
-  
 
-    
+
+
   });
 }
 // four.addEventListener('click',fourDraw())
@@ -78,88 +79,141 @@ function boardDraw() {
 //     }
 
 //     box.style = border;
-  
 
-    
+
+
 //   });
 // }
 
 
 
 const startGame = () => {
-    boxArray.forEach(box => box.addEventListener('click',boxClick));
-   
-  
-    
+  boxArray.forEach(box => box.addEventListener('click', boxClick));
+
+
+
+
+
+}
+// function autoClick(){
+
+
+//           // console.log(boxArray);
+//           // let aiBox = document.querySelectorAll(".box")[0].textContent = '';
+//           // console.log(aiBox);
+
+//           // if(playerTurn === player2){
+
+//             let randomNumber = getRandomPosition();
+//             // boxId = randomNumber
+//             options[randomNumber] = player2;
+//             console.log( `Options : ${options}` );
+//             document.querySelectorAll(".box")[randomNumber].textContent = player2;
+//             console.log( `E Target : ${e.target.textContent}` );
+
+//             console.log(`RandomNumber: ${randomNumber}`)
+
+//           // }
+//           console.log('zamas');
+// }
+
+function boxClick(e) {
+  if (won === true) {
+    return;
+  }
+
+
+  let boxId = e.target.id
+  // console.log(`box id ${boxId}`);
+
+  // checkedPosition.push(parseInt([boxId]))
+  // console.log(`Position : ${checkedPosition}`);
+
+
+  if (options[boxId]) return;
+
+
+  options[boxId] = playerTurn;
+  e.target.textContent = playerTurn;
+
+
+
+
+  if (playerWon() !== false) {
+    result.textContent = `${playerTurn} Won!!!`
+    let win = playerWon()
+    won = true;
+    win.forEach(box => boxArray[box].style.backgroundColor = 'Darkorange')
+
+    tie = false;
+    return;
+
+
+  } else if (!options.includes(null)) {
+    result.textContent = `DRAW!!!!!!!`
+    return;
+
+  }
+
+  // else{
+
+  playerTurn = playerTurn === player1 ? player2 : player1;
+  result.textContent = `${playerTurn} Turn!!`
+
+  // }
+
+
+
+
+
 }
 
+// function getRandomPosition (){
 
-function boxClick (e){
-  if(won===true)
-    {
-       return;
+//   // if(checkedPosition.includes(randomNumber)){
+//        let randomNumber1 = 0;
+
+
+
+//     do {
+//       randomNumber1 = Math.floor(Math.random()*8)  
+//     }while (
+//       checkedPosition.includes(randomNumber1)
+//     )
+//     return randomNumber1
+
+//   // }
+
+
+// }
+
+function playerWon(e) {
+
+
+  for (const cond of winning) {
+    let [a, b, c] = cond;
+
+    if (options[a] && (options[a] === options[b] && options[a] === options[c])) {
+      return [a, b, c]
     }
 
 
-    const boxId = e.target.id
- 
-
-      if(!options[boxId]){
-          options[boxId] = playerTurn;
-          e.target.textContent = playerTurn;
-          
-         
-  
-          if(playerWon() !==false){
-              result.textContent = `${playerTurn} Won!!!`
-              let win = playerWon()
-              won = true;
-              win.forEach(box => boxArray[box].style.backgroundColor='Darkorange')
-             
-              tie = false;
-              
-              
-             
-          }else  if(!options.includes(null)){
-            result.textContent = `DRAW!!!!!!!`
-           
-          }
-
-          else{
-            
-            playerTurn = playerTurn === player1? player2 : player1;
-            result.textContent = `${playerTurn} Turn!!`
-          }
-   
-    }
-}
-function playerWon(e){
-    
-    
-    for (const cond of winning) {
-        let [a,b,c] = cond; 
-        
-        if(options[a] && (options[a] === options[b] && options[a] === options[c])){
-            return [a,b,c]
-        }
-       
-        
-    }
-    return false
+  }
+  return false
 }
 
 
-resetButton.addEventListener('click',reset);
-function reset (){
+resetButton.addEventListener('click', reset);
+function reset() {
 
-    options.fill(null)
-    won = false
-    boxArray.forEach(box =>{
-        box.textContent = ''
-        box.style.backgroundColor=''
+  options.fill(null)
+  won = false
+  boxArray.forEach(box => {
+    box.textContent = ''
+    box.style.backgroundColor = ''
 
-    })
-    result.textContent = 'Tic Tac Toe'
+  })
+  result.textContent = 'Tic Tac Toe'
 }
 
 

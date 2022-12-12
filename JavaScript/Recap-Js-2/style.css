@@ -1,0 +1,82 @@
+html {
+  font-size: calc(15px + 0.6vw);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ol {
+  font-size: 1.5rem;
+  list-style-type: none;
+  width: max-content;
+  font-weight: 600;
+}
+
+li {
+  font-size: 1.125rem;
+  text-align: left;
+  font-weight: 400;
+  text-decoration: none;
+  margin-top: 0.75rem;
+}
+
+.modal-btn{
+  background-color: rgb(144, 172, 67);
+  color: white;
+  border:none;
+  padding: 15px;
+  width: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  border: 5px;
+
+}
+
+.modal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.35);
+}
+.modal{
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  background-color: white;
+  border-radius: 6px;
+  padding: 30px 50px;
+  /* display: flex; */
+  text-align: center;
+
+}
+.modal h1,.modal p{
+  margin-bottom: 17px;
+}
+.modal p{
+  max-width: 467px;
+}
+.modal-btn{
+  background-color: rgb(144, 172, 67);
+  color: white;
+  border:none;
+  padding: 15px;
+  width: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  border: 5px;
+}
+
+.show{
+  opacity: 1;
+  pointer-events: auto;
+}

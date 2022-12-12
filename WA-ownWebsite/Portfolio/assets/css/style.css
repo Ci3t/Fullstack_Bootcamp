@@ -525,7 +525,7 @@ body {
 }
 .page3-section .page3-info .p3-btn {
   position: absolute;
-  margin: 190vh 0 0 -30vh;
+  margin: 49vh 0 0 -116vh;
   text-decoration: none;
   padding: 1rem 3rem;
   background: #7e0532;
@@ -543,7 +543,7 @@ body {
 .page3-section .page3-info .footer {
   position: absolute;
   top: 60vh;
-  margin: 5vh 15vh 0 -20vh;
+  margin: 4vh 15vh 0 -51vh;
   left: 77vh;
 }
 .page3-section .page3-info .footer ul {
@@ -776,18 +776,7 @@ body {
   .gallery .right {
     display: block;
     /*CSS transitions*/
-    -o-transition-property: none;
-    -moz-transition-property: none;
-    -ms-transition-property: none;
-    -webkit-transition-property: none;
-    transition-property: none;
-    /*CSS transforms*/
-    /*CSS animations*/
-    -webkit-animation: none;
-    -moz-animation: none;
-    -o-animation: none;
-    -ms-animation: none;
-    animation: none;
+
     position: absolute;
     right: -11vh;
   }
@@ -801,18 +790,6 @@ body {
     position: absolute;
     left: -11vh;
     /*CSS transitions*/
-    -o-transition-property: none;
-    -moz-transition-property: none;
-    -ms-transition-property: none;
-    -webkit-transition-property: none;
-    transition-property: none;
-    /*CSS transforms*/
-    /*CSS animations*/
-    -webkit-animation: none;
-    -moz-animation: none;
-    -o-animation: none;
-    -ms-animation: none;
-    animation: none;
   }
   .gallery .left div {
     position: relative;
@@ -868,7 +845,7 @@ body {
   }
   .page3-section .page3-info h2 {
     position: absolute;
-    left: 14vh;
+    left: 44vh;
     margin: 0;
     top: 2vh;
   }
@@ -880,7 +857,7 @@ body {
     top: 5vh;
   }
   .page3-section .page3-info .p3-btn {
-    margin: 138vh 0 0 0vh;
+    margin: 78vh 0 0 -23vh;
   }
   .page3-section .page3-info .footer {
     display: none;
@@ -946,7 +923,7 @@ body {
     top: -47vh;
   }
   .page3-section .page3-info .p3-btn {
-    margin: 65vh 0 0 -31vh;
+    margin: 77vh 0 0 -36vh;
   }
   .page3-section .page3-info .footer {
     display: none;
@@ -1003,31 +980,31 @@ body {
   .page3-section {
     height: 140vh;
   }
+  .page3-section .page3-info h2 {
+    left: 2vh;
+  }
+  .page3-section .page3-info h1 {
+    right: 10vh;
+    top: -48vh;
+  }
+  .page3-section .page3-info .p3-btn {
+    margin: 25vh 0 0 -26vh;
+  }
+  .page3-section .page3-info .footer {
+    margin: 10vh 4vh 0 0vh;
+  }
+  .page3-section .container3 img {
+    display: block;
+  }
+  .page3-section .container3 {
+    display: block;
+  }
+  .page3-section .page3-info p {
+    padding-left: 0;
+  }
 }
 /* .page3-section .page3-info {
   display: block;
   margin-left: 5vh;
   top: 50vh;
 } */
-.page3-section .page3-info h2 {
-  left: 2vh;
-}
-.page3-section .page3-info h1 {
-  right: 10vh;
-  top: -48vh;
-}
-.page3-section .page3-info .p3-btn {
-  margin: 65vh 0 0 -15vh;
-}
-.page3-section .page3-info .footer {
-  margin: 10vh 4vh 0 0vh;
-}
-.page3-section .container3 img {
-  display: block;
-}
-.page3-section .container3 {
-  display: block;
-}
-.page3-section .page3-info p {
-  padding-left: 0;
-}

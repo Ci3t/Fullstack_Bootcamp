@@ -17,5 +17,5 @@ plus.addEventListener("click", ()=>{
     a= (a<10) ? a : a;
     cart.innerHTML = a;
 
-    console.log(a)
+    
 })

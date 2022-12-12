@@ -1,0 +1,28 @@
+@keyframes slide {
+    0%{ 
+        margin: 10px 0vh;
+        display: none;
+        
+    }
+    100%{
+        margin: 10px 35vh;
+        
+    }
+    
+    
+}
+
+@keyframes jumping {
+    0%{
+    transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

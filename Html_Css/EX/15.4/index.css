@@ -3,8 +3,8 @@ body {
   padding: 0;
 }
 .container {
-  margin: 40px;
-  width: 100%;
+  padding: 200px;
+  width: 200vh;
 
   display: grid;
   grid-auto-flow: dense;
